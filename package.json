@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "yarn workspaces run test"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2"
+  },
+  "prettier": "./packages/prettier-config/index.json",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn audit && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier -w -u"
+  }
+}

@@ -1,0 +1,29 @@
+#IDE files (intellij, vscode, eclipse)
+.idea/**
+*.iml
+
+.vscode
+
+.project
+.settings/
+
+# Modules and build stuff
+node_modules/
+
+# Optional eslint cache
+.eslintcache
+
+# Yarn extra files
+.yarn-integrity
+yarn-error.log
+
+# dotenv environment variables file
+.env
+
+# sonar
+.sonar
+
+# test reports and coverage
+reports/
+coverage/
+screenshots/
