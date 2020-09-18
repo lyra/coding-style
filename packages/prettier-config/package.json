@@ -18,6 +18,11 @@
     "url": "https://github.com/lyra/coding-style.git"
   },
   "homepage": "https://github.com/lyra/coding-style",
+  "keywords": [
+    "prettier",
+    "prettierconfig",
+    "lyra"
+  ],
   "main": "index.json",
   "files": [
     "index.json"
