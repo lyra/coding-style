@@ -24,8 +24,8 @@ Of course, **Typescript** is supported.
 
 | Package                                                              | Version                                                                         |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [`@lyra-network/eslint-config-react`](/packages/eslint-config-react) | ![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/eslint-config-react) |
-| [`@lyra-network/prettier-config`](/packages/prettier-config)         | ![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/prettier-config)     |
+| [`@lyra-network/eslint-config-react`](/packages/eslint-config-react) | [![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/eslint-config-react)](https://www.npmjs.com/package/@lyra-network/eslint-config-react) |
+| [`@lyra-network/prettier-config`](/packages/prettier-config)         | [![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/prettier-config)](https://www.npmjs.com/package/@lyra-network/prettier-config) |
 
 ## Usage
 
