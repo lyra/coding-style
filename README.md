@@ -101,7 +101,9 @@ Do not push on master but submit a merge request instead, thanks :)
 
 #### Release
 
-Ensure to commit all your changes, and when you're ready to publish a release, run this command:
+You must be logged in using `npm adduser --scope=@lyra-network` to be able to publish a release.
+
+Make sure to commit all your changes, and when you're ready to publish a release, run this command:
 
 ```sh
 lerna publish

@@ -1,10 +1,27 @@
 {
   "name": "@lyra-network/eslint-config-react",
   "version": "1.0.0",
+  "description": "Lyra's ESLint config for React apps",
   "license": "MIT",
+  "author": "Lyra (https://www.lyra.com)",
+  "contributors": [
+    {
+      "name": "Alexandre Fournier",
+      "email": "alex.fournier.fr@gmail.com"
+    },
+    {
+      "name": "Alain Dubrulle",
+      "email": "alain.dubrulle@lyra-network.com"
+    }
+  ],
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyra/coding-style.git"
+  },
+  "homepage": "https://github.com/lyra/coding-style",
   "main": "index.js",
   "files": [
     "index.js"
