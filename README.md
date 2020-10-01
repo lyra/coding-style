@@ -27,18 +27,29 @@ Of course, **Typescript** is supported.
 | [`@lyra-network/eslint-config-react`](/packages/eslint-config-react) | [![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/eslint-config-react)](https://www.npmjs.com/package/@lyra-network/eslint-config-react) |
 | [`@lyra-network/prettier-config`](/packages/prettier-config)         | [![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/prettier-config)](https://www.npmjs.com/package/@lyra-network/prettier-config) |
 
-## Usage
+## Installation
 
-**1. Install dependencies**
+**1. Install peer dependencies**
+
+```sh
+yarn add -D \
+  "eslint@^7.10.0" \
+  "@typescript-eslint/eslint-plugin@^4.3.0" \
+  "@typescript-eslint/parser@^4.3.0" \
+  "eslint-plugin-import@^2.22.0" \
+  "eslint-plugin-jest@^24.0.0" \
+  "eslint-plugin-node@^11.1.0" \
+  "eslint-plugin-promise@^4.2.1" \
+  "eslint-plugin-react@^7.21.2" \
+  "eslint-plugin-react-hooks@^4.1.0" \
+  "eslint-plugin-sonarjs@^0.5.0" \
+  "eslint-plugin-standard@^4.0.1"
+```
+
+**2. Install main dependencies**
 
 ```sh
 yarn add -D @lyra-network/eslint-config-react @lyra-network/prettier-config prettier husky lint-staged
-```
-
-**2. Install sub-dependencies**
-
-```sh
-npx install-peerdeps -D @lyra-network/eslint-config-react
 ```
 
 **3. Project configuration**
@@ -103,7 +114,9 @@ Do not push on master but submit a merge request instead, thanks :)
 
 You must be logged in using `npm adduser --scope=@lyra-network` to be able to publish a release.
 
-Make sure to commit all your changes, and when you're ready to publish a release, run this command:
+Before releasing, make sure to synchronize `peerDependencies` packages versions with installation instructions in `README.md`.
+
+Also, make sure to commit all your changes, and when you're ready to publish a release, run this command:
 
 ```sh
 lerna publish
