@@ -18,6 +18,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'prettier',
     'prettier/react',
+    'prettier/standard',
   ],
   plugins: ['react', 'sonarjs'],
   settings: {
