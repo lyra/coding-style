@@ -19,6 +19,7 @@ function getErrors(file) {
 describe('Validate ESLint configuration', () => {
   it('should find errors in file fixture-with-errors.tsx', () => {
     return getErrors('file-with-errors.tsx').then((results) => {
+      expect(results[0].warningCount).not.toBe(0)
       expect(results[0].errorCount).not.toBe(0)
     })
   })

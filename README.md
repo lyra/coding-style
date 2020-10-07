@@ -34,10 +34,11 @@ Of course, **Typescript** is supported.
 ```sh
 yarn add -D \
   "eslint@^7.10.0" \
-  "@typescript-eslint/eslint-plugin@^4.3.0" \
-  "@typescript-eslint/parser@^4.3.0" \
-  "eslint-plugin-import@^2.22.0" \
-  "eslint-plugin-jest@^24.0.0" \
+  "typescript@^4.0.3" \
+  "@typescript-eslint/eslint-plugin@^4.4.0" \
+  "@typescript-eslint/parser@^4.4.0" \
+  "eslint-plugin-import@^2.22.1" \
+  "eslint-plugin-jest@^24.0.2" \
   "eslint-plugin-node@^11.1.0" \
   "eslint-plugin-promise@^4.2.1" \
   "eslint-plugin-react@^7.21.2" \
@@ -49,7 +50,12 @@ yarn add -D \
 **2. Install main dependencies**
 
 ```sh
-yarn add -D @lyra-network/eslint-config-react @lyra-network/prettier-config prettier husky lint-staged
+yarn add -D \
+  @lyra-network/eslint-config-react \
+  @lyra-network/prettier-config \
+  prettier \
+  husky \
+  lint-staged
 ```
 
 **3. Project configuration**
