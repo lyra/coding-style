@@ -11,7 +11,7 @@ const Foo: React.FC<Props> = ({ name, age }) => {
   const foo = `Hello ${name}`
 
   // this should be an error (@typescript-eslint/prefer-as-const)
-  const bar: 2 = 2;
+  const bar: 2 = 2
 
   return (
     <div>

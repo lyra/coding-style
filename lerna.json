@@ -5,6 +5,7 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
+      "ignoreChanges": ["*.md", "*.test.js", "**/__fixtures__/*", "**/__snapshots__/*"],
       "message": "chore(release): publish"
     }
   }
