@@ -34,7 +34,7 @@ Of course, **Typescript** is supported.
 ```sh
 yarn add -D \
   "eslint@^7.10.0" \
-  "typescript@^4.0.3" \
+  "typescript@^4.1.2" \
   "@typescript-eslint/eslint-plugin@^4.4.0" \
   "@typescript-eslint/parser@^4.4.0" \
   "eslint-plugin-import@^2.22.1" \
@@ -44,7 +44,7 @@ yarn add -D \
   "eslint-plugin-react@^7.21.2" \
   "eslint-plugin-react-hooks@^4.1.0" \
   "eslint-plugin-sonarjs@^0.5.0" \
-  "eslint-plugin-standard@^4.0.1"
+  "eslint-plugin-standard@^5.0.0"
 ```
 
 **2. Install main dependencies**
