@@ -33,15 +33,15 @@ Of course, **Typescript** is supported.
 
 ```sh
 yarn add -D \
-  "eslint@^7.10.0" \
+  "eslint@^7.17.0" \
   "typescript@^4.1.2" \
-  "@typescript-eslint/eslint-plugin@^4.4.0" \
-  "@typescript-eslint/parser@^4.4.0" \
+  "@typescript-eslint/eslint-plugin@^4.11.1" \
+  "@typescript-eslint/parser@^4.11.1" \
   "eslint-plugin-import@^2.22.1" \
   "eslint-plugin-jest@^24.0.2" \
   "eslint-plugin-node@^11.1.0" \
   "eslint-plugin-promise@^4.2.1" \
-  "eslint-plugin-react@^7.21.2" \
+  "eslint-plugin-react@^7.22.0" \
   "eslint-plugin-react-hooks@^4.1.0" \
   "eslint-plugin-sonarjs@^0.5.0" \
   "eslint-plugin-standard@^5.0.0"
