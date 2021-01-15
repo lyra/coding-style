@@ -1,6 +1,6 @@
 {
   "name": "@lyra-network/eslint-config-react",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Lyra's ESLint config for React apps",
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",
