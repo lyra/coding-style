@@ -1,5 +1,5 @@
 {
-  "name": "@lyra-network/prettier-config",
+  "name": "@lyracom/prettier-config",
   "version": "1.0.4",
   "description": "Lyra's Prettier config",
   "license": "MIT",

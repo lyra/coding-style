@@ -24,8 +24,8 @@ Of course, **Typescript** is supported.
 
 | Package                                                              | Version                                                                                                                                            |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`@lyra-network/eslint-config-react`](/packages/eslint-config-react) | [![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/eslint-config-react)](https://www.npmjs.com/package/@lyra-network/eslint-config-react) |
-| [`@lyra-network/prettier-config`](/packages/prettier-config)         | [![npm (scoped)](https://img.shields.io/npm/v/@lyra-network/prettier-config)](https://www.npmjs.com/package/@lyra-network/prettier-config)         |
+| [`@lyracom/eslint-config-react`](/packages/eslint-config-react) | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config-react)](https://www.npmjs.com/package/@lyracom/eslint-config-react) |
+| [`@lyracom/prettier-config`](/packages/prettier-config)         | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/prettier-config)](https://www.npmjs.com/package/@lyracom/prettier-config)         |
 
 ## Installation
 
@@ -50,8 +50,8 @@ yarn add -D \
 
 ```sh
 yarn add -D \
-  @lyra-network/eslint-config-react \
-  @lyra-network/prettier-config \
+  @lyracom/eslint-config-react \
+  @lyracom/prettier-config \
   prettier \
   husky \
   lint-staged
@@ -64,9 +64,9 @@ In your `package.json`, add the following lines:
 ```json
 {
   "eslintConfig": {
-    "extends": "@lyra-network/eslint-config-react"
+    "extends": "@lyracom/eslint-config-react"
   },
-  "prettier": "@lyra-network/prettier-config",
+  "prettier": "@lyracom/prettier-config",
   "husky": {
     "hooks": {
       "pre-commit": "yarn tsc && lint-staged"
@@ -117,7 +117,7 @@ Do not push on master but submit a merge request instead, thanks :)
 
 #### Release
 
-You must be logged in using `npm adduser --scope=@lyra-network` to be able to publish a release.
+You must be logged in using `npm adduser --scope=@lyracom` to be able to publish a release.
 
 Before releasing, make sure to synchronize `peerDependencies` packages versions with installation instructions in `README.md`.
 
