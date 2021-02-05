@@ -1,17 +1,13 @@
 {
-  "name": "@lyracom/eslint-config-react",
-  "version": "3.0.0",
-  "description": "Lyra's ESLint config for React apps",
+  "name": "@lyracom/eslint-config",
+  "version": "1.0.0",
+  "description": "Lyra's ESLint config",
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",
   "contributors": [
     {
       "name": "Alexandre Fournier",
       "email": "alex.fournier.fr@gmail.com"
-    },
-    {
-      "name": "Alain Dubrulle",
-      "email": "alain.dubrulle@lyra-network.com"
     }
   ],
   "publishConfig": {
@@ -24,10 +20,9 @@
   "homepage": "https://github.com/lyra/coding-style",
   "keywords": [
     "eslint",
-    "eslintconfig",
+    "eslintConfig",
     "lyra",
-    "javascript",
-    "react"
+    "javascript"
   ],
   "main": "index.js",
   "files": [
@@ -51,8 +46,6 @@
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-sonarjs": "^0.5.0"
   },
   "peerDependencies": {
@@ -63,8 +56,6 @@
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-sonarjs": "^0.5.0"
   },
   "engines": {
