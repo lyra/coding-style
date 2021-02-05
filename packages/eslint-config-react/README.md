@@ -1,6 +1,6 @@
-# @lyracom/eslint-config-react
+# `@lyracom/eslint-config-react`
 
-> Lyra's ESLint config for React apps
+> Lyra's ESLint config for React applications
 
 [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config-react)](https://www.npmjs.com/package/@lyracom/eslint-config-react)
 

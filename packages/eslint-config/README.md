@@ -1,11 +1,7 @@
 # `@lyracom/eslint-config`
 
-> TODO: description
+> Lyra's ESLint config
 
-## Usage
+[![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config)](https://www.npmjs.com/package/@lyracom/eslint-config)
 
-```
-const eslintConfig = require('@lyracom/eslint-config');
-
-// TODO: DEMONSTRATE API
-```
+This package is part of « [Coding style for Lyra JavaScript apps](https://github.com/lyra/coding-style) », please follow instructions from this repo.
