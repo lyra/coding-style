@@ -18,7 +18,7 @@
   "prettier": "./packages/prettier-config/index.json",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test && yarn audit && lint-staged"
+      "pre-commit": "yarn test && lint-staged"
     }
   },
   "lint-staged": {
