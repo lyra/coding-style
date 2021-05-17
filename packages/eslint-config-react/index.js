@@ -12,8 +12,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'prettier',
-    'prettier/standard',
-    'prettier/react',
   ],
   settings: {
     react: {
@@ -27,7 +25,7 @@ module.exports = {
     {
       // typescript files
       files: ['**/*.ts?(x)'],
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'error',

@@ -6,17 +6,12 @@
  * Based on standard (https://standardjs.com)
  */
 module.exports = {
-  extends: [
-    'standard',
-    'plugin:sonarjs/recommended',
-    'prettier',
-    'prettier/standard',
-  ],
+  extends: ['standard', 'plugin:sonarjs/recommended', 'prettier'],
   overrides: [
     {
       // typescript files
       files: ['**/*.ts?(x)'],
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'error',

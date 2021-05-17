@@ -20,11 +20,11 @@ Of course, **TypeScript** is supported.
 
 ## Packages
 
-| Package | Description | Version |
-| ------- | ----------- | ------- |
-| [`@lyracom/eslint-config`](/packages/eslint-config) | ESLint config for pure JavaScript or TypeScript projects | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config)](https://www.npmjs.com/package/@lyracom/eslint-config) |
-| [`@lyracom/eslint-config-react`](/packages/eslint-config-react) | ESLint config for React applications | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config-react)](https://www.npmjs.com/package/@lyracom/eslint-config-react) |
-| [`@lyracom/prettier-config`](/packages/prettier-config) | Prettier config for TypeScript projects | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/prettier-config)](https://www.npmjs.com/package/@lyracom/prettier-config) |
+| Package                                                         | Description                                              | Version                                                                                                                                  |
+| --------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [`@lyracom/eslint-config`](/packages/eslint-config)             | ESLint config for pure JavaScript or TypeScript projects | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config)](https://www.npmjs.com/package/@lyracom/eslint-config)             |
+| [`@lyracom/eslint-config-react`](/packages/eslint-config-react) | ESLint config for React applications                     | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config-react)](https://www.npmjs.com/package/@lyracom/eslint-config-react) |
+| [`@lyracom/prettier-config`](/packages/prettier-config)         | Prettier config for TypeScript projects                  | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/prettier-config)](https://www.npmjs.com/package/@lyracom/prettier-config)         |
 
 ## Installation
 
@@ -35,18 +35,18 @@ Of course, **TypeScript** is supported.
 
 ```sh
 yarn add -D \
-  "eslint@^7.17.0" \
-  "prettier@^2.2.1" \
-  "typescript@^4.1.3" \
-  "@typescript-eslint/eslint-plugin@^4.14.2" \
-  "@typescript-eslint/parser@^4.14.2" \
-  "eslint-plugin-import@^2.22.1" \
-  "eslint-plugin-jest@^24.0.2" \
+  "eslint@^7.26.0" \
+  "prettier@^2.3.0" \
+  "typescript@^4.2.4" \
+  "@typescript-eslint/eslint-plugin@^4.23.0" \
+  "@typescript-eslint/parser@^4.23.0" \
+  "eslint-plugin-import@^2.23.2" \
+  "eslint-plugin-jest@^24.3.6" \
   "eslint-plugin-node@^11.1.0" \
-  "eslint-plugin-promise@^4.2.1" \
-  "eslint-plugin-react@^7.22.0" \
-  "eslint-plugin-react-hooks@^4.1.2" \
-  "eslint-plugin-sonarjs@^0.5.0"
+  "eslint-plugin-promise@^5.1.0" \
+  "eslint-plugin-react@^7.23.2" \
+  "eslint-plugin-react-hooks@^4.2.0" \
+  "eslint-plugin-sonarjs@^0.7.0"
 ```
 
 **2. Install main dependencies**
@@ -56,8 +56,13 @@ yarn add -D \
   @lyracom/eslint-config-react \
   @lyracom/prettier-config \
   prettier \
-  husky \
   lint-staged
+```
+
+Install `husky`:
+
+```sh
+npx husky-init && yarn
 ```
 
 **3. Project configuration**
@@ -70,11 +75,6 @@ In your `package.json`, add the following lines:
     "extends": "@lyracom/eslint-config-react"
   },
   "prettier": "@lyracom/prettier-config",
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn tsc && lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint",
     "*": "prettier -w -u"
@@ -82,10 +82,11 @@ In your `package.json`, add the following lines:
 }
 ```
 
-Finally, reinstall husky to enable git hooks:
+In `.husky/pre-commit`, add the following lines:
 
 ```sh
-yarn add -D --force husky
+yarn test
+npx lint-staged
 ```
 
 **4. Example scripts**

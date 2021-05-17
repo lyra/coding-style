@@ -4,6 +4,6 @@ export function foo() {
 
   // this should be an error (@typescript-eslint/prefer-as-const)
   const bar: 2 = 2
-  
+
   return 'foo'
 }
