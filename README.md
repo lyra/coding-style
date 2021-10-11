@@ -41,12 +41,12 @@ yarn add -D \
   "@typescript-eslint/eslint-plugin@^4.23.0" \
   "@typescript-eslint/parser@^4.23.0" \
   "eslint-plugin-import@^2.23.2" \
-  "eslint-plugin-jest@^24.3.6" \
+  "eslint-plugin-jest@^25.0.1" \
   "eslint-plugin-node@^11.1.0" \
   "eslint-plugin-promise@^5.1.0" \
   "eslint-plugin-react@^7.23.2" \
   "eslint-plugin-react-hooks@^4.2.0" \
-  "eslint-plugin-sonarjs@^0.7.0"
+  "eslint-plugin-sonarjs@^0.10.0"
 ```
 
 **2. Install main dependencies**
@@ -123,7 +123,10 @@ Do not push on master but submit a merge request instead, thanks :)
 
 You must be logged in using `npm adduser --scope=@lyracom` to be able to publish a release.
 
-Before releasing, make sure to synchronize `peerDependencies` packages versions with installation instructions in `README.md`.
+Checklist before releasing:
+
+- make sure to synchronize packages versions between `devDependencies` and `peerDependencies`, and also with installation instructions in `README.md`
+- make sure there is no url in `*.lyra` in `yarn.lock`
 
 Also, make sure to commit all your changes, and when you're ready to publish a release, run this command:
 
