@@ -122,7 +122,7 @@ In your `package.json`, add the following lines:
   },
   "prettier": "@lyracom/prettier-config",
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint",
+    "*.{js,jsx,ts,tsx}": "eslint --max-warnings 0",
     "*": "prettier -w -u"
   }
 }
