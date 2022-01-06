@@ -1,18 +1,23 @@
 'use strict'
 
 /**
- * Generic ESLint config for Lyra frontend projects
- * Supports React and Typescript
+ * Lyra's ESLint config for React apps
+ * Supports React, Typescript and Jest
  * Based on standard (https://standardjs.com)
  */
 module.exports = {
   extends: [
+    'eslint:recommended',
     'standard',
-    'plugin:sonarjs/recommended',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
+    'plugin:sonarjs/recommended',
     'prettier',
   ],
+  parserOptions: {
+    sourceType: 'module',
+  },
   settings: {
     react: {
       version: 'detect',
@@ -27,9 +32,9 @@ module.exports = {
       files: ['**/*.ts?(x)'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
+        'react/prop-types': 'off',
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': 'error',
-        'react/prop-types': 'off',
       },
     },
     {

@@ -1,6 +1,7 @@
 # Coding style for Lyra JavaScript apps
 
 A monorepo containing coding style related packages for Lyra JavaScript apps.
+This coding style includes linting and formatting rules.
 
 - [Prerequisites](#prerequisites)
 - [Packages](#packages)
@@ -23,55 +24,100 @@ Of course, **TypeScript** is supported.
 | Package                                                         | Description                                              | Version                                                                                                                                  |
 | --------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | [`@lyracom/eslint-config`](/packages/eslint-config)             | ESLint config for pure JavaScript or TypeScript projects | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config)](https://www.npmjs.com/package/@lyracom/eslint-config)             |
+| [`@lyracom/eslint-config-node`](/packages/eslint-config-node)   | ESLint config for Node.js applications                   | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config-node)](https://www.npmjs.com/package/@lyracom/eslint-config-node)   |
 | [`@lyracom/eslint-config-react`](/packages/eslint-config-react) | ESLint config for React applications                     | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/eslint-config-react)](https://www.npmjs.com/package/@lyracom/eslint-config-react) |
 | [`@lyracom/prettier-config`](/packages/prettier-config)         | Prettier config for TypeScript projects                  | [![npm (scoped)](https://img.shields.io/npm/v/@lyracom/prettier-config)](https://www.npmjs.com/package/@lyracom/prettier-config)         |
 
 ## Installation
 
-> For a pure JS / TS project (no React), use `@lyracom/eslint-config` instead of `@lyracom/eslint-config-react`.
-> Also, you will not need `eslint-plugin-react` and `eslint-plugin-react-hooks`, you can skip their installation.
+Depending the nature of your project, choose the correct section below:
 
-**1. Install peer dependencies**
+<details>
+<summary>For pure JavaScript / TypeScript projects</summary>
 
 ```sh
 yarn add -D \
-  "eslint@^7.26.0" \
-  "prettier@^2.3.0" \
-  "typescript@^4.2.4" \
-  "@typescript-eslint/eslint-plugin@^4.23.0" \
-  "@typescript-eslint/parser@^4.23.0" \
-  "eslint-plugin-import@^2.23.2" \
-  "eslint-plugin-jest@^25.0.1" \
+  "eslint@^8.6.0" \
+  "prettier@^2.5.1" \
+  "typescript@^4.5.4" \
+  "@lyracom/eslint-config" \
+  "@lyracom/prettier-config" \
+  "@typescript-eslint/eslint-plugin@^5.9.0" \
+  "@typescript-eslint/parser@^5.9.0" \
+  "eslint-plugin-import@^2.25.4" \
+  "eslint-plugin-jest@^25.3.4" \
   "eslint-plugin-node@^11.1.0" \
-  "eslint-plugin-promise@^5.1.0" \
+  "eslint-plugin-promise@^6.0.0" \
+  "eslint-plugin-sonarjs@^0.11.0" \
+  "lint-staged"
+```
+
+</details>
+
+<details>
+<summary>For Node.js projects</summary>
+
+```sh
+yarn add -D \
+  "eslint@^8.6.0" \
+  "prettier@^2.5.1" \
+  "typescript@^4.5.4" \
+  "@lyracom/eslint-config-node" \
+  "@lyracom/prettier-config" \
+  "@typescript-eslint/eslint-plugin@^5.9.0" \
+  "@typescript-eslint/parser@^5.9.0" \
+  "eslint-plugin-import@^2.25.4" \
+  "eslint-plugin-jest@^25.3.4" \
+  "eslint-plugin-node@^11.1.0" \
+  "eslint-plugin-promise@^6.0.0" \
+  "eslint-plugin-sonarjs@^0.11.0" \
+  "lint-staged"
+```
+
+</details>
+
+<details>
+<summary>For React projects</summary>
+
+```sh
+yarn add -D \
+  "eslint@^8.6.0" \
+  "prettier@^2.5.1" \
+  "typescript@^4.5.4" \
+  "@lyracom/eslint-config-react" \
+  "@lyracom/prettier-config" \
+  "@typescript-eslint/eslint-plugin@^5.9.0" \
+  "@typescript-eslint/parser@^5.9.0" \
+  "eslint-plugin-import@^2.25.4" \
+  "eslint-plugin-jest@^25.3.4" \
+  "eslint-plugin-node@^11.1.0" \
+  "eslint-plugin-promise@^6.0.0" \
   "eslint-plugin-react@^7.23.2" \
   "eslint-plugin-react-hooks@^4.2.0" \
-  "eslint-plugin-sonarjs@^0.10.0"
+  "eslint-plugin-sonarjs@^0.11.0" \
+  "lint-staged"
 ```
 
-**2. Install main dependencies**
+</details>
 
-```sh
-yarn add -D \
-  @lyracom/eslint-config-react \
-  @lyracom/prettier-config \
-  prettier \
-  lint-staged
-```
-
-Install `husky`:
+Now install `husky`:
 
 ```sh
 npx husky-init && yarn
 ```
 
-**3. Project configuration**
+## Configuration
 
 In your `package.json`, add the following lines:
 
 ```json
 {
   "eslintConfig": {
+    // For pure JS / TS projects
+    "extends": "@lyracom/eslint-config",
+    // For Node.js projects
+    "extends": "@lyracom/eslint-config-node",
+    // For React projects
     "extends": "@lyracom/eslint-config-react"
   },
   "prettier": "@lyracom/prettier-config",
@@ -89,9 +135,7 @@ yarn test
 npx lint-staged
 ```
 
-**4. Example scripts**
-
-Here are some `package.json` scripts you can inspire from:
+Optionally, here are some `package.json` scripts you can inspire from:
 
 ```json
 {
