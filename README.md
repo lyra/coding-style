@@ -170,7 +170,6 @@ You must be logged in using `npm adduser --scope=@lyracom` to be able to publish
 Checklist before releasing:
 
 - make sure to synchronize packages versions between `devDependencies` and `peerDependencies`, and also with installation instructions in `README.md`
-- make sure there is no url in `*.lyra` in `yarn.lock`
 
 Also, make sure to commit all your changes, and when you're ready to publish a release, run this command:
 
