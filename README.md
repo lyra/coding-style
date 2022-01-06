@@ -33,7 +33,7 @@ Of course, **TypeScript** is supported.
 Depending the nature of your project, choose the correct section below:
 
 <details>
-<summary>For pure JavaScript / TypeScript projects</summary>
+<summary><b>For pure JavaScript / TypeScript projects</b></summary>
 
 ```sh
 yarn add -D \
@@ -55,7 +55,7 @@ yarn add -D \
 </details>
 
 <details>
-<summary>For Node.js projects</summary>
+<summary><b>For Node.js projects</b></summary>
 
 ```sh
 yarn add -D \
@@ -77,7 +77,7 @@ yarn add -D \
 </details>
 
 <details>
-<summary>For React projects</summary>
+<summary><b>For React projects</b></summary>
 
 ```sh
 yarn add -D \
@@ -92,8 +92,8 @@ yarn add -D \
   "eslint-plugin-jest@^25.3.4" \
   "eslint-plugin-node@^11.1.0" \
   "eslint-plugin-promise@^6.0.0" \
-  "eslint-plugin-react@^7.23.2" \
-  "eslint-plugin-react-hooks@^4.2.0" \
+  "eslint-plugin-react@^7.28.0" \
+  "eslint-plugin-react-hooks@^4.3.0" \
   "eslint-plugin-sonarjs@^0.11.0" \
   "lint-staged"
 ```
@@ -110,7 +110,7 @@ npx husky-init && yarn
 
 In your `package.json`, add the following lines:
 
-```json
+```jsonc
 {
   "eslintConfig": {
     // For pure JS / TS projects
