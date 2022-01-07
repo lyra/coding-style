@@ -141,7 +141,7 @@ Optionally, here are some `package.json` scripts you can inspire from:
 {
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings 0 .",
     "format": "prettier -w -u \"src/**/*\""
   }
 }
