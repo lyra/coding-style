@@ -6,8 +6,8 @@ exports.lintFiles = function (file) {
     overrideConfig: {
       settings: {
         react: {
-          // setting "latest" instead of "detect" because "react" package is not installed
-          version: 'latest',
+          // forcing React version instead of "detect" because package is not installed locally
+          version: '17.0.2',
         },
       },
     },

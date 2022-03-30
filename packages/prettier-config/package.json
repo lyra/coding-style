@@ -37,12 +37,12 @@
     "prettier-plugin-organize-imports": "^2.0.0"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.4"
+    "prettier": "^2.6.1",
+    "typescript": "^4.6.3"
   },
   "peerDependencies": {
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.4"
+    "prettier": "^2.6.1",
+    "typescript": "*"
   },
   "engines": {
     "node": ">=12.17.0"

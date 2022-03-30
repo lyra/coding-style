@@ -39,7 +39,11 @@ module.exports = {
     },
     {
       // test files config, assuming jest
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      files: [
+        '.jest/**/*.[jt]s?(x)',
+        '**/__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(spec|test).[jt]s?(x)',
+      ],
       extends: ['plugin:jest/recommended'],
     },
   ],
