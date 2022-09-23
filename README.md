@@ -37,18 +37,18 @@ Depending the nature of your project, choose the correct section below:
 
 ```sh
 yarn add -D \
-  "eslint@^8.12.0" \
-  "prettier@^2.6.1" \
-  "typescript@^4.6.3" \
+  "eslint@^8" \
+  "prettier@^2" \
+  "typescript@^4.3" \
   "@lyracom/eslint-config" \
   "@lyracom/prettier-config" \
-  "@typescript-eslint/eslint-plugin@^5.17.0" \
-  "@typescript-eslint/parser@^5.17.0" \
-  "eslint-plugin-import@^2.25.4" \
-  "eslint-plugin-jest@^26.1.3" \
-  "eslint-plugin-node@^11.1.0" \
-  "eslint-plugin-promise@^6.0.0" \
-  "eslint-plugin-sonarjs@^0.13.0" \
+  "@typescript-eslint/eslint-plugin@^5" \
+  "@typescript-eslint/parser@^5" \
+  "eslint-plugin-import@^2" \
+  "eslint-plugin-jest@^27" \
+  "eslint-plugin-n@^15" \
+  "eslint-plugin-promise@^6" \
+  "eslint-plugin-sonarjs@^0.15" \
   "lint-staged"
 ```
 
@@ -59,18 +59,18 @@ yarn add -D \
 
 ```sh
 yarn add -D \
-  "eslint@^8.12.0" \
-  "prettier@^2.6.1" \
-  "typescript@^4.6.3" \
+  "eslint@^8" \
+  "prettier@^2" \
+  "typescript@^4.3" \
   "@lyracom/eslint-config-node" \
   "@lyracom/prettier-config" \
-  "@typescript-eslint/eslint-plugin@^5.17.0" \
-  "@typescript-eslint/parser@^5.17.0" \
-  "eslint-plugin-import@^2.25.4" \
-  "eslint-plugin-jest@^26.1.3" \
-  "eslint-plugin-node@^11.1.0" \
-  "eslint-plugin-promise@^6.0.0" \
-  "eslint-plugin-sonarjs@^0.13.0" \
+  "@typescript-eslint/eslint-plugin@^5" \
+  "@typescript-eslint/parser@^5" \
+  "eslint-plugin-import@^2" \
+  "eslint-plugin-jest@^27" \
+  "eslint-plugin-n@^15" \
+  "eslint-plugin-promise@^6" \
+  "eslint-plugin-sonarjs@^0.15" \
   "lint-staged"
 ```
 
@@ -81,20 +81,20 @@ yarn add -D \
 
 ```sh
 yarn add -D \
-  "eslint@^8.12.0" \
-  "prettier@^2.6.1" \
-  "typescript@^4.6.3" \
+  "eslint@^8" \
+  "prettier@^2" \
+  "typescript@^4.3" \
   "@lyracom/eslint-config-react" \
   "@lyracom/prettier-config" \
-  "@typescript-eslint/eslint-plugin@^5.17.0" \
-  "@typescript-eslint/parser@^5.17.0" \
-  "eslint-plugin-import@^2.25.4" \
-  "eslint-plugin-jest@^26.1.3" \
-  "eslint-plugin-node@^11.1.0" \
-  "eslint-plugin-promise@^6.0.0" \
-  "eslint-plugin-react@^7.28.0" \
-  "eslint-plugin-react-hooks@^4.3.0" \
-  "eslint-plugin-sonarjs@^0.13.0" \
+  "@typescript-eslint/eslint-plugin@^5" \
+  "@typescript-eslint/parser@^5" \
+  "eslint-plugin-import@^2" \
+  "eslint-plugin-jest@^27" \
+  "eslint-plugin-n@^15" \
+  "eslint-plugin-promise@^6" \
+  "eslint-plugin-react@^7" \
+  "eslint-plugin-react-hooks@^4" \
+  "eslint-plugin-sonarjs@^0.15" \
   "lint-staged"
 ```
 

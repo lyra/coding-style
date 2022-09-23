@@ -7,7 +7,7 @@ exports.lintFiles = function (file) {
       settings: {
         react: {
           // forcing React version instead of "detect" because package is not installed locally
-          version: '17.0.2',
+          version: '18.2.0',
         },
       },
     },

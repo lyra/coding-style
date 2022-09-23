@@ -9,7 +9,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'standard',
-    'plugin:node/recommended',
+    'plugin:n/recommended',
     'plugin:promise/recommended',
     'plugin:sonarjs/recommended',
     'prettier',
