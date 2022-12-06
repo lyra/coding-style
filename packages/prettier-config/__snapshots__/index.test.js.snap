@@ -23,10 +23,11 @@ export default Foo
 `;
 
 exports[`Validate Prettier configuration should organize imports correctly 1`] = `
-"import { foo } from './a'
+"import * as SortImports from '@trivago/prettier-plugin-sort-imports'
+import { bar, foo } from './a'
 import b from './b'
 import c from './c'
 
-console.log(foo, b, c)
+console.log(foo, b, c, Object.keys(SortImports))
 "
 `;

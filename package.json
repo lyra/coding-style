@@ -6,7 +6,8 @@
   "scripts": {
     "prepare": "husky install",
     "format": "prettier -w .",
-    "test": "yarn workspaces run test"
+    "test": "yarn workspaces run test",
+    "release": "lerna publish"
   },
   "devDependencies": {
     "enhanced-resolve": "^5",

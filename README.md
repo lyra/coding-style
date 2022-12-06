@@ -48,7 +48,7 @@ yarn add -D \
   "eslint-plugin-jest@^27" \
   "eslint-plugin-n@^15" \
   "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.15" \
+  "eslint-plugin-sonarjs@^0.17" \
   "lint-staged"
 ```
 
@@ -70,7 +70,7 @@ yarn add -D \
   "eslint-plugin-jest@^27" \
   "eslint-plugin-n@^15" \
   "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.15" \
+  "eslint-plugin-sonarjs@^0.17" \
   "lint-staged"
 ```
 
@@ -94,7 +94,7 @@ yarn add -D \
   "eslint-plugin-promise@^6" \
   "eslint-plugin-react@^7" \
   "eslint-plugin-react-hooks@^4" \
-  "eslint-plugin-sonarjs@^0.15" \
+  "eslint-plugin-sonarjs@^0.17" \
   "lint-staged"
 ```
 
@@ -147,6 +147,12 @@ Optionally, here are some `package.json` scripts you can inspire from:
 }
 ```
 
+### Prettier
+
+The prettier config uses the package `@trivago/prettier-plugin-sort-imports` to sort imports. You can customize this config if you need a specific order in your imports, if you have import aliases for example.
+
+Check available options on their website: https://github.com/trivago/prettier-plugin-sort-imports
+
 ## IDE integration
 
 All major IDE have integration for ESLint and Prettier, check your settings to enable them.
@@ -173,7 +179,7 @@ Checklist before releasing:
 - make sure to commit all your changes, and when you're ready to publish a release, run the following command:
 
 ```sh
-lerna publish
+yarn release
 ```
 
 Lerna detects packages with changes and prompt you for new packages versions. It will then tag, push and publish automatically.

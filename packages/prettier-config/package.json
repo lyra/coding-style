@@ -34,7 +34,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "prettier-plugin-organize-imports": "^3"
+    "@trivago/prettier-plugin-sort-imports": "^4"
   },
   "devDependencies": {
     "prettier": "^2",
