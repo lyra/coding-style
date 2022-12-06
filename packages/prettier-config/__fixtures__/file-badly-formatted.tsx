@@ -1,5 +1,5 @@
 // @ts-expect-error no react dep
-import * as React from    'react'
+import  *  as   React    from     'react'
 
 interface Props
 {

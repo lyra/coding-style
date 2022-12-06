@@ -4,5 +4,6 @@
   "singleQuote": true,
   "trailingComma": "all",
   "importOrder": ["<THIRD_PARTY_MODULES>", "^[./]"],
-  "importOrderSortSpecifiers": true
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true
 }

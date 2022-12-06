@@ -1,5 +1,6 @@
 // @ts-expect-error no react dep
-import * as React from 'react' // eslint-disable-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved
+import * as React from 'react'
 
 interface Props {
   name: string
