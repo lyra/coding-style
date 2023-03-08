@@ -18,6 +18,11 @@ module.exports = {
   },
   overrides: [
     {
+      // javascript files
+      files: ['**/*.js?(x)'],
+      extends: ['plugin:import/recommended'],
+    },
+    {
       // typescript files
       files: ['**/*.ts?(x)'],
       extends: ['plugin:@typescript-eslint/recommended'],

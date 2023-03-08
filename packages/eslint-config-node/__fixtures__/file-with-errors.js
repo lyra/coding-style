@@ -1,7 +1,10 @@
+// error expected (import/no-unresolved)
+import notFound from './nope'
+
 export function foo() {
   const bar = 2
 
-  // this should be an error (no-const-assign, no-unused-vars)
+  // error expected (no-const-assign, no-unused-vars)
   bar = 42
 
   process.exit()
