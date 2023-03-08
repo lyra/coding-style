@@ -1,6 +1,6 @@
 {
   "name": "@lyracom/eslint-config-node",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Lyra's ESLint config for Node.js apps",
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",
