@@ -6,6 +6,7 @@
  * Based on standard (https://standardjs.com)
  */
 module.exports = {
+  root: true,
   extends: [
     'eslint:recommended',
     'standard',
@@ -21,14 +22,19 @@ module.exports = {
       // javascript files
       files: ['**/*.js?(x)'],
       extends: ['plugin:import/recommended'],
+      settings: {
+        'import/resolver': {
+          typescript: true,
+          node: true,
+        },
+      },
     },
     {
       // typescript files
       files: ['**/*.ts?(x)'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
-        'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': 'error',
+        '@typescript-eslint/no-empty-function': 'off',
       },
     },
     {

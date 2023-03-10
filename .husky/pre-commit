@@ -1,6 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-sh scripts/check-npm-registry.sh
-yarn test
+pnpm test
 npx lint-staged
