@@ -29,25 +29,25 @@ To use this coding style, we assume that your technical stack contains:
 
 ## Installation
 
-### **1. Formatting**
-
-You need `typescript` and `prettier@^2` in your project to use this Prettier config.
-
-```sh
-npm install --dev @lyracom/prettier-config
-```
-
-### **2. Linting**
-
-You need `typescript` and `eslint@^8` in your project to use this ESLint config.
-
 Depending the nature of your project, choose the correct section below:
 
 <details>
 <summary><b>For pure JavaScript / TypeScript projects</b></summary>
 
 ```sh
-npm install --dev @lyracom/eslint-config
+pnpm add -D \
+  "eslint@^8" \
+  "prettier@^2" \
+  "typescript@^4.3" \
+  "@lyracom/eslint-config" \
+  "@lyracom/prettier-config" \
+  "@typescript-eslint/eslint-plugin@^5" \
+  "eslint-plugin-import@^2" \
+  "eslint-plugin-jest@^27" \
+  "eslint-plugin-n@^15" \
+  "eslint-plugin-promise@^6" \
+  "eslint-plugin-sonarjs@^0.18" \
+  "lint-staged"
 ```
 
 </details>
@@ -56,36 +56,50 @@ npm install --dev @lyracom/eslint-config
 <summary><b>For Node.js projects</b></summary>
 
 ```sh
-npm install --dev @lyracom/eslint-config-node
+pnpm add -D \
+  "eslint@^8" \
+  "prettier@^2" \
+  "typescript@^4.3" \
+  "@lyracom/eslint-config-node" \
+  "@lyracom/prettier-config" \
+  "@typescript-eslint/eslint-plugin@^5" \
+  "eslint-plugin-import@^2" \
+  "eslint-plugin-jest@^27" \
+  "eslint-plugin-n@^15" \
+  "eslint-plugin-promise@^6" \
+  "eslint-plugin-sonarjs@^0.18" \
+  "lint-staged"
 ```
 
 </details>
 
-<details open>
+<details>
 <summary><b>For React projects</b></summary>
 
 ```sh
-npm install --dev @lyracom/eslint-config-react
+pnpm add -D \
+  "eslint@^8" \
+  "prettier@^2" \
+  "typescript@^4.3" \
+  "@lyracom/eslint-config-react" \
+  "@lyracom/prettier-config" \
+  "@typescript-eslint/eslint-plugin@^5" \
+  "eslint-plugin-import@^2" \
+  "eslint-plugin-jest@^27" \
+  "eslint-plugin-n@^15" \
+  "eslint-plugin-promise@^6" \
+  "eslint-plugin-react@^7" \
+  "eslint-plugin-react-hooks@^4" \
+  "eslint-plugin-sonarjs@^0.18" \
+  "lint-staged"
 ```
 
 </details>
 
-### **3. Other tools**
-
-**husky**
-
-> Modern native git hooks made easy
+Now install `husky`:
 
 ```sh
-npx husky-init && npm install
-```
-
-**lint-staged**
-
-> Run linters against staged git files only
-
-```sh
-npm install --dev lint-staged
+npx husky-init && yarn
 ```
 
 ## Configuration
@@ -113,8 +127,7 @@ In your `package.json`, add the following lines:
 In `.husky/pre-commit`, add the following lines:
 
 ```sh
-# .husky/pre-commit
-npm test
+pnpm test
 npx lint-staged
 ```
 
