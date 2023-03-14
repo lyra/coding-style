@@ -41,6 +41,7 @@ pnpm add -D \
   "typescript@^4.3" \
   "@lyracom/eslint-config" \
   "@lyracom/prettier-config" \
+  "@trivago/prettier-plugin-sort-imports@^4" \
   "@typescript-eslint/eslint-plugin@^5" \
   "eslint-plugin-import@^2" \
   "eslint-plugin-jest@^27" \
@@ -62,6 +63,7 @@ pnpm add -D \
   "typescript@^4.3" \
   "@lyracom/eslint-config-node" \
   "@lyracom/prettier-config" \
+  "@trivago/prettier-plugin-sort-imports@^4" \
   "@typescript-eslint/eslint-plugin@^5" \
   "eslint-plugin-import@^2" \
   "eslint-plugin-jest@^27" \
@@ -73,7 +75,7 @@ pnpm add -D \
 
 </details>
 
-<details>
+<details open>
 <summary><b>For React projects</b></summary>
 
 ```sh
@@ -83,6 +85,7 @@ pnpm add -D \
   "typescript@^4.3" \
   "@lyracom/eslint-config-react" \
   "@lyracom/prettier-config" \
+  "@trivago/prettier-plugin-sort-imports@^4" \
   "@typescript-eslint/eslint-plugin@^5" \
   "eslint-plugin-import@^2" \
   "eslint-plugin-jest@^27" \
@@ -138,7 +141,7 @@ Optionally, here are some `package.json` scripts you can inspire from:
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier -w -u ."
   }
 }
 ```
