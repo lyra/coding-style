@@ -13,11 +13,10 @@ This coding style includes linting and formatting rules.
 
 To use this coding style, we assume that your technical stack contains:
 
+- [typescript](https://www.typescriptlang.org/)
 - [eslint](https://eslint.org/) for linting
 - [prettier](https://prettier.io/) for formatting
 - [jest](https://jestjs.io/) for testing
-
-Of course, **TypeScript** is supported.
 
 ## Packages
 
@@ -30,26 +29,25 @@ Of course, **TypeScript** is supported.
 
 ## Installation
 
+### **1. Formatting**
+
+You need `typescript` and `prettier@^2` in your project to use this Prettier config.
+
+```sh
+npm install --dev @lyracom/prettier-config
+```
+
+### **2. Linting**
+
+You need `typescript` and `eslint@^8` in your project to use this ESLint config.
+
 Depending the nature of your project, choose the correct section below:
 
 <details>
 <summary><b>For pure JavaScript / TypeScript projects</b></summary>
 
 ```sh
-yarn add -D \
-  "eslint@^8" \
-  "prettier@^2" \
-  "typescript@^4.3" \
-  "@lyracom/eslint-config" \
-  "@lyracom/prettier-config" \
-  "@typescript-eslint/eslint-plugin@^5" \
-  "@typescript-eslint/parser@^5" \
-  "eslint-plugin-import@^2" \
-  "eslint-plugin-jest@^27" \
-  "eslint-plugin-n@^15" \
-  "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.18" \
-  "lint-staged"
+npm install --dev @lyracom/eslint-config
 ```
 
 </details>
@@ -58,52 +56,36 @@ yarn add -D \
 <summary><b>For Node.js projects</b></summary>
 
 ```sh
-yarn add -D \
-  "eslint@^8" \
-  "prettier@^2" \
-  "typescript@^4.3" \
-  "@lyracom/eslint-config-node" \
-  "@lyracom/prettier-config" \
-  "@typescript-eslint/eslint-plugin@^5" \
-  "@typescript-eslint/parser@^5" \
-  "eslint-plugin-import@^2" \
-  "eslint-plugin-jest@^27" \
-  "eslint-plugin-n@^15" \
-  "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.18" \
-  "lint-staged"
+npm install --dev @lyracom/eslint-config-node
 ```
 
 </details>
 
-<details>
+<details open>
 <summary><b>For React projects</b></summary>
 
 ```sh
-yarn add -D \
-  "eslint@^8" \
-  "prettier@^2" \
-  "typescript@^4.3" \
-  "@lyracom/eslint-config-react" \
-  "@lyracom/prettier-config" \
-  "@typescript-eslint/eslint-plugin@^5" \
-  "@typescript-eslint/parser@^5" \
-  "eslint-plugin-import@^2" \
-  "eslint-plugin-jest@^27" \
-  "eslint-plugin-n@^15" \
-  "eslint-plugin-promise@^6" \
-  "eslint-plugin-react@^7" \
-  "eslint-plugin-react-hooks@^4" \
-  "eslint-plugin-sonarjs@^0.18" \
-  "lint-staged"
+npm install --dev @lyracom/eslint-config-react
 ```
 
 </details>
 
-Now install `husky`:
+### **3. Other tools**
+
+**husky**
+
+> Modern native git hooks made easy
 
 ```sh
-npx husky-init && yarn
+npx husky-init && npm install
+```
+
+**lint-staged**
+
+> Run linters against staged git files only
+
+```sh
+npm install --dev lint-staged
 ```
 
 ## Configuration
@@ -131,7 +113,8 @@ In your `package.json`, add the following lines:
 In `.husky/pre-commit`, add the following lines:
 
 ```sh
-yarn test
+# .husky/pre-commit
+npm test
 npx lint-staged
 ```
 
@@ -141,11 +124,13 @@ Optionally, here are some `package.json` scripts you can inspire from:
 {
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
-    "lint": "eslint --max-warnings 0 .",
-    "format": "prettier -w -u \"src/**/*\""
+    "lint": "eslint .",
+    "format": "prettier --write ."
   }
 }
 ```
+
+Do not forget to use `.prettierignore` and `.eslintignore` files to exclude folders and files you don't want to format/lint.
 
 ### Prettier
 
@@ -159,27 +144,24 @@ All major IDE have integration for ESLint and Prettier, check your settings to e
 
 ## Contribution
 
-#### Development
+### Development
 
 To contribute at this repo, set up your development environment with this command:
 
 ```sh
-npx lerna bootstrap
+pnpm install
 ```
 
-Do not push on master but submit a merge request instead, thanks :)
+Do not push directly on main but submit a pull request instead, thanks :)
 
-#### Release
+### Changesets
 
-You must be logged in using `npm adduser --scope=@lyracom` to be able to publish a release.
+All changes are managed with [changesets](https://github.com/changesets/changesets). Whenever you commit a change who deserves to appear in the changelog, you need to include a change using the command: `pnpm changeset`.
 
-Checklist before releasing:
+### Continuous integration
 
-- make sure to synchronize packages versions between `devDependencies` and `peerDependencies`, and also with installation instructions in `README.md`
-- make sure to commit all your changes, and when you're ready to publish a release, run the following command:
+Continuous integration is handled by GitHub Actions. Workflows are defined in `.github` folder.
 
-```sh
-yarn release
-```
+### Release
 
-Lerna detects packages with changes and prompt you for new packages versions. It will then tag, push and publish automatically.
+There is a `publish` action in GitHub Actions. It creates a release pull request. Once accepted, packages are automatically published.
