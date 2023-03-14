@@ -1,5 +1,11 @@
 # @lyracom/eslint-config
 
+## 5.0.1
+
+### Patch Changes
+
+- 9dc1f45: fix ESLint plugin dependencies
+
 ## 5.0.0
 
 ### Major Changes
