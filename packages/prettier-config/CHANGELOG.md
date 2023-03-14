@@ -1,5 +1,11 @@
 # @lyracom/prettier-config
 
+## 5.0.1
+
+### Patch Changes
+
+- 26b693c: fix prettier config deps
+
 ## 5.0.0
 
 ### Major Changes
