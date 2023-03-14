@@ -1,3 +1,5 @@
-export function foo() {
-  return 'foo'
+import { foo } from './file-without-error'
+
+export function bar() {
+  return foo()
 }

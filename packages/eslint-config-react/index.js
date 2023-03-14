@@ -6,50 +6,23 @@
  * Based on standard (https://standardjs.com)
  */
 module.exports = {
+  root: true,
   extends: [
-    'eslint:recommended',
-    'standard',
+    '@lyracom/eslint-config',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:sonarjs/recommended',
-    'prettier',
+    'prettier', // always put it last, so it gets the chance to override other configs
   ],
   parserOptions: {
     sourceType: 'module',
+  },
+  env: {
+    browser: true,
   },
   settings: {
     react: {
       version: 'detect',
     },
   },
-  env: {
-    browser: true,
-  },
-  overrides: [
-    {
-      // javascript files
-      files: ['**/*.js?(x)'],
-      extends: ['plugin:import/recommended'],
-    },
-    {
-      // typescript files
-      files: ['**/*.ts?(x)'],
-      extends: ['plugin:@typescript-eslint/recommended'],
-      rules: {
-        'react/prop-types': 'off',
-        'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': 'error',
-      },
-    },
-    {
-      // test files config, assuming jest
-      files: [
-        '.jest/**/*.[jt]s?(x)',
-        '**/__tests__/**/*.[jt]s?(x)',
-        '**/?(*.)+(spec|test).[jt]s?(x)',
-      ],
-      extends: ['plugin:jest/recommended'],
-    },
-  ],
 }

@@ -1,1 +1,4 @@
+.vscode/
+pnpm-lock.yaml
+pnpm-workspace.yaml
 /packages/prettier-config/__fixtures__

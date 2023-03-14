@@ -1,0 +1,33 @@
+name: publish
+
+on: workflow_dispatch
+
+jobs:
+  version-publish:
+    name: Version and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - name: Setup node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+
+      - run: pnpm install
+      - run: pnpm run test
+      - run: pnpm run format:check
+
+      - name: Create release PR
+        uses: changesets/action@v1
+        with:
+          publish: pnpm changeset publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
