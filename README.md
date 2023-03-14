@@ -102,7 +102,7 @@ pnpm add -D \
 Now install `husky`:
 
 ```sh
-npx husky-init && yarn
+npx husky-init && pnpm install
 ```
 
 ## Configuration
