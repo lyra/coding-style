@@ -1,6 +1,6 @@
 {
   "name": "@lyracom/eslint-config",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "description": "Lyra's ESLint config",
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",

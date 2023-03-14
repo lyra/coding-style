@@ -1,6 +1,6 @@
 {
   "name": "@lyracom/prettier-config",
-  "version": "4.1.1",
+  "version": "5.0.0",
   "description": "Lyra's Prettier config",
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",
