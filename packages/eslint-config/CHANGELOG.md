@@ -1,5 +1,11 @@
 # @lyracom/eslint-config
 
+## 5.0.2
+
+### Patch Changes
+
+- 8ddaef3: upgrade deps
+
 ## 5.0.1
 
 ### Patch Changes

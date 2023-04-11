@@ -1,5 +1,13 @@
 # @lyracom/eslint-config-react
 
+## 7.0.2
+
+### Patch Changes
+
+- 8ddaef3: upgrade deps
+- Updated dependencies [8ddaef3]
+  - @lyracom/eslint-config@5.0.2
+
 ## 7.0.1
 
 ### Patch Changes
