@@ -47,7 +47,7 @@ pnpm add -D \
   "eslint-plugin-jest@^27" \
   "eslint-plugin-n@^15" \
   "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.18" \
+  "eslint-plugin-sonarjs@^0.19" \
   "lint-staged"
 ```
 
@@ -69,7 +69,7 @@ pnpm add -D \
   "eslint-plugin-jest@^27" \
   "eslint-plugin-n@^15" \
   "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.18" \
+  "eslint-plugin-sonarjs@^0.19" \
   "lint-staged"
 ```
 
@@ -93,7 +93,7 @@ pnpm add -D \
   "eslint-plugin-promise@^6" \
   "eslint-plugin-react@^7" \
   "eslint-plugin-react-hooks@^4" \
-  "eslint-plugin-sonarjs@^0.18" \
+  "eslint-plugin-sonarjs@^0.19" \
   "lint-staged"
 ```
 
