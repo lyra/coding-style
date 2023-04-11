@@ -1,5 +1,13 @@
 # @lyracom/eslint-config-node
 
+## 4.0.2
+
+### Patch Changes
+
+- 8ddaef3: upgrade deps
+- Updated dependencies [8ddaef3]
+  - @lyracom/eslint-config@5.0.2
+
 ## 4.0.1
 
 ### Patch Changes
