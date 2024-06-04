@@ -1,0 +1,40 @@
+{
+  "name": "@lyracom/tsconfig",
+  "version": "0.0.1",
+  "description": "Lyra's TypeScript configs",
+  "license": "MIT",
+  "author": "Lyra (https://www.lyra.com)",
+  "contributors": [
+    "Sébastien Balayn <sebastien.balayn@lyra-network.com>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyra/coding-style.git"
+  },
+  "homepage": "https://github.com/lyra/coding-style",
+  "bugs": {
+    "url": "https://github.com/lyra/coding-style/issues"
+  },
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "lyra"
+  ],
+  "type": "module",
+  "main": "tsconfig-strict.json",
+  "files": [
+    "tsconfig-*.json"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "typescript": "~5.5.4"
+  },
+  "peerDependencies": {
+    "typescript": "~5.5.4"
+  }
+}
