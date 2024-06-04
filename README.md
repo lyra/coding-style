@@ -39,6 +39,7 @@ pnpm add -D \
   "eslint@^8" \
   "prettier@^2" \
   "typescript@^4.3" \
+  "@lyracom/tsconfig" \
   "@lyracom/eslint-config" \
   "@lyracom/prettier-config" \
   "@trivago/prettier-plugin-sort-imports@^4" \
@@ -61,6 +62,7 @@ pnpm add -D \
   "eslint@^8" \
   "prettier@^2" \
   "typescript@^4.3" \
+  "@lyracom/tsconfig" \
   "@lyracom/eslint-config-node" \
   "@lyracom/prettier-config" \
   "@trivago/prettier-plugin-sort-imports@^4" \
@@ -83,6 +85,7 @@ pnpm add -D \
   "eslint@^8" \
   "prettier@^2" \
   "typescript@^4.3" \
+  "@lyracom/tsconfig" \
   "@lyracom/eslint-config-react" \
   "@lyracom/prettier-config" \
   "@trivago/prettier-plugin-sort-imports@^4" \
@@ -147,6 +150,20 @@ Optionally, here are some `package.json` scripts you can inspire from:
 ```
 
 Do not forget to use `.prettierignore` and `.eslintignore` files to exclude folders and files you don't want to format/lint.
+
+### TypeScript
+
+Look at all the configurations available in the package (base/node/dom/jsx) and chose the one you want to use in your project. Then create a tsconfig.json file and add the following lines:
+
+```jsonc
+{
+  // always try to use strict TypeScript config
+  "extends": ["@lyracom/tsconfig/tsconfig-strict.json", "@lyracom/tsconfig/tsconfig-[CONFIG].json"],
+
+  // or, if you work on a legacy/poc project or do not want to use strict config
+  "extends": "@lyracom/tsconfig/tsconfig-[CONFIG].json"
+}
+```
 
 ### Prettier
 

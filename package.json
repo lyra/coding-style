@@ -19,5 +19,6 @@
   "prettier": "./packages/prettier-config/index.json",
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
-  }
+  },
+  "packageManager": "pnpm@9.6.0"
 }
