@@ -5,10 +5,7 @@
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",
   "contributors": [
-    {
-      "name": "Alexandre Fournier",
-      "email": "alex.fournier.fr@gmail.com"
-    }
+    "Alexandre Fournier <alexandre.fournier@lyra.com>"
   ],
   "publishConfig": {
     "access": "public"
