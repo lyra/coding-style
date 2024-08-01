@@ -197,4 +197,6 @@ Continuous integration is handled by GitHub Actions. Workflows are defined in `.
 
 ### Release
 
-There is a `publish` action in GitHub Actions. It creates a release pull request. Once accepted, packages are automatically published.
+First, launch the `version` GitHub action. It will create a release pull request.
+
+Once accepted, you can launch the `publish` GitHub action to publish packages to npm.
