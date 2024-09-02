@@ -3,7 +3,7 @@
     "strict": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "checkJS": true,
+    "checkJs": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
