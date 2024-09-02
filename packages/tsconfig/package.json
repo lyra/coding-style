@@ -1,6 +1,6 @@
 {
   "name": "@lyracom/tsconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lyra's TypeScript configs",
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",
