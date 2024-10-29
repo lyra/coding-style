@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Validate Prettier configuration should format a file correctly 1`] = `
+exports[`Validate Prettier configuration should format a file correctly: file-badly-formatted.tsx 1`] = `
 "// @ts-expect-error no react dep
 import * as React from 'react'
 
@@ -22,7 +22,7 @@ export default Foo
 "
 `;
 
-exports[`Validate Prettier configuration should organize imports correctly 1`] = `
+exports[`Validate Prettier configuration should format a file correctly: file-disorganized-imports.ts 1`] = `
 "// @ts-nocheck
 import { dummy } from '@lyra/dummy'
 import { Table } from '@mui/material'

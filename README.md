@@ -9,7 +9,7 @@ This coding style includes linting and formatting rules.
 - [IDE integration](#ide-integration)
 - [Contribution](#contribution)
 
-## Prerequisites
+## Technical stack
 
 To use this coding style, we assume that your technical stack contains:
 
@@ -29,27 +29,60 @@ To use this coding style, we assume that your technical stack contains:
 
 ## Installation
 
-Depending the nature of your project, choose the correct section below:
+### TypeScript
+
+```sh
+pnpm add -D \
+  "typescript@^5.6" \
+  "@lyracom/tsconfig@^1"
+```
+
+Look at all the configurations available in the package (base/node/dom/jsx) and chose the one you want to use in your project. Then create a tsconfig.json file and add the following lines:
+
+```json
+{
+  // always try to use strict TypeScript config
+  "extends": ["@lyracom/tsconfig/tsconfig-strict.json", "@lyracom/tsconfig/tsconfig-[CONFIG].json"],
+
+  // or, if you work on a legacy/poc project or do not want to use strict config
+  "extends": "@lyracom/tsconfig/tsconfig-[CONFIG].json"
+}
+```
+
+### Prettier
+
+```sh
+pnpm add -D \
+  "prettier@^3" \
+  "@lyracom/prettier-config@^6" \
+  "@trivago/prettier-plugin-sort-imports@^4"
+```
+
+The prettier config uses the package `@trivago/prettier-plugin-sort-imports` to sort imports. You can customize this config if you need a specific order in your imports, if you have import aliases for example.
+
+Check available options on their website: https://github.com/trivago/prettier-plugin-sort-imports
+
+### ESLint
+
+```sh
+pnpm add -D \
+  "eslint@^8" \
+  "@typescript-eslint/eslint-plugin@^5" \
+  "eslint-plugin-import@^2" \
+  "eslint-plugin-jest@^27" \
+  "eslint-plugin-n@^15" \
+  "eslint-plugin-promise@^6" \
+  "eslint-plugin-sonarjs@^0.19"
+```
+
+Depending the nature of your project, you should also add the following plugins:
 
 <details>
 <summary><b>For pure JavaScript / TypeScript projects</b></summary>
 
 ```sh
 pnpm add -D \
-  "eslint@^8" \
-  "prettier@^2" \
-  "typescript@^4.3" \
-  "@lyracom/tsconfig" \
-  "@lyracom/eslint-config" \
-  "@lyracom/prettier-config" \
-  "@trivago/prettier-plugin-sort-imports@^4" \
-  "@typescript-eslint/eslint-plugin@^5" \
-  "eslint-plugin-import@^2" \
-  "eslint-plugin-jest@^27" \
-  "eslint-plugin-n@^15" \
-  "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.19" \
-  "lint-staged"
+  "@lyracom/eslint-config"
 ```
 
 </details>
@@ -59,20 +92,7 @@ pnpm add -D \
 
 ```sh
 pnpm add -D \
-  "eslint@^8" \
-  "prettier@^2" \
-  "typescript@^4.3" \
-  "@lyracom/tsconfig" \
-  "@lyracom/eslint-config-node" \
-  "@lyracom/prettier-config" \
-  "@trivago/prettier-plugin-sort-imports@^4" \
-  "@typescript-eslint/eslint-plugin@^5" \
-  "eslint-plugin-import@^2" \
-  "eslint-plugin-jest@^27" \
-  "eslint-plugin-n@^15" \
-  "eslint-plugin-promise@^6" \
-  "eslint-plugin-sonarjs@^0.19" \
-  "lint-staged"
+  "@lyracom/eslint-config-node"
 ```
 
 </details>
@@ -82,25 +102,14 @@ pnpm add -D \
 
 ```sh
 pnpm add -D \
-  "eslint@^8" \
-  "prettier@^2" \
-  "typescript@^4.3" \
-  "@lyracom/tsconfig" \
   "@lyracom/eslint-config-react" \
-  "@lyracom/prettier-config" \
-  "@trivago/prettier-plugin-sort-imports@^4" \
-  "@typescript-eslint/eslint-plugin@^5" \
-  "eslint-plugin-import@^2" \
-  "eslint-plugin-jest@^27" \
-  "eslint-plugin-n@^15" \
-  "eslint-plugin-promise@^6" \
   "eslint-plugin-react@^7" \
-  "eslint-plugin-react-hooks@^4" \
-  "eslint-plugin-sonarjs@^0.19" \
-  "lint-staged"
+  "eslint-plugin-react-hooks@^4"
 ```
 
 </details>
+
+### Husky
 
 Now install `husky`:
 
@@ -108,11 +117,17 @@ Now install `husky`:
 npx husky-init && pnpm install
 ```
 
+### Lint-staged
+
+```sh
+pnpm add -D lint-staged
+```
+
 ## Configuration
 
 In your `package.json`, add the following lines:
 
-```jsonc
+```json
 {
   "eslintConfig": {
     // For pure JS / TS projects
@@ -150,26 +165,6 @@ Optionally, here are some `package.json` scripts you can inspire from:
 ```
 
 Do not forget to use `.prettierignore` and `.eslintignore` files to exclude folders and files you don't want to format/lint.
-
-### TypeScript
-
-Look at all the configurations available in the package (base/node/dom/jsx) and chose the one you want to use in your project. Then create a tsconfig.json file and add the following lines:
-
-```jsonc
-{
-  // always try to use strict TypeScript config
-  "extends": ["@lyracom/tsconfig/tsconfig-strict.json", "@lyracom/tsconfig/tsconfig-[CONFIG].json"],
-
-  // or, if you work on a legacy/poc project or do not want to use strict config
-  "extends": "@lyracom/tsconfig/tsconfig-[CONFIG].json"
-}
-```
-
-### Prettier
-
-The prettier config uses the package `@trivago/prettier-plugin-sort-imports` to sort imports. You can customize this config if you need a specific order in your imports, if you have import aliases for example.
-
-Check available options on their website: https://github.com/trivago/prettier-plugin-sort-imports
 
 ## IDE integration
 
