@@ -1,5 +1,11 @@
 # @lyracom/prettier-config
 
+## 6.0.0
+
+### Major Changes
+
+- 4682952: Prettier migration to version 3
+
 ## 5.0.1
 
 ### Patch Changes
