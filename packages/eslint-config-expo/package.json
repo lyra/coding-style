@@ -1,0 +1,65 @@
+{
+  "name": "@lyracom/eslint-config-expo",
+  "version": "0.0.0",
+  "description": "Lyra's ESLint config for Expo React Native apps",
+  "license": "MIT",
+  "author": "Lyra (https://www.lyra.com)",
+  "contributors": [
+    "Liam MILOR <liam.milor@lyra-network.com>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyra/coding-style.git"
+  },
+  "homepage": "https://github.com/lyra/coding-style",
+  "keywords": [
+    "eslint",
+    "eslintConfig",
+    "lyra",
+    "javascript",
+    "typescript",
+    "expo",
+    "react-native"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "configs"
+  ],
+  "bugs": {
+    "url": "https://github.com/lyra/coding-style/issues"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/fixtures/"
+    ]
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "eslint-config-expo": "^57.0.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.37.0",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "eslint": "^9",
+    "typescript": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
