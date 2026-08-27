@@ -1,5 +1,11 @@
 # @lyracom/prettier-config
 
+## 7.0.0
+
+### Major Changes
+
+- 80c1ee3: Require `@trivago/prettier-plugin-sort-imports` v6 as a peer dependency.
+
 ## 6.0.0
 
 ### Major Changes

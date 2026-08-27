@@ -1,6 +1,6 @@
 {
   "name": "@lyracom/eslint-config-expo",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Lyra's ESLint config for Expo React Native apps",
   "license": "MIT",
   "author": "Lyra (https://www.lyra.com)",
