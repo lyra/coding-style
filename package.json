@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install",
+    "prepare": "husky",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "pnpm --recursive test"
