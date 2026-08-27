@@ -2,6 +2,10 @@ name: version
 
 on: workflow_dispatch
 
+permissions:
+  contents: write # to check out repo (actions/checkout) and to create releases (changesets/action/publish)
+  pull-requests: write # to create pull request (changesets/action/version)
+
 jobs:
   version:
     name: Version
@@ -9,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false # recommended: do not persist git credentials on disk
 
       - name: Setup pnpm
         uses: pnpm/setup@v2
@@ -17,14 +23,11 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: pnpm
+          package-manager-cache: false # recommended: avoid cache poisoning
 
       - run: pnpm install
       - run: pnpm test
       - run: pnpm format:check
 
       - name: Create release PR
-        uses: changesets/action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        uses: changesets/action/version@v2
