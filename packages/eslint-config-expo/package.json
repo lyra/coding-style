@@ -33,12 +33,7 @@
     "url": "https://github.com/lyra/coding-style/issues"
   },
   "scripts": {
-    "test": "jest"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/fixtures/"
-    ]
+    "test": "node --test"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.68.0",

@@ -1,4 +1,4 @@
-// @ts-expect-error no react dep
+// @ts-nocheck
 import  *  as   React    from     'react'
 
 interface Props
