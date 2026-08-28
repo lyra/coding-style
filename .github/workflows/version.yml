@@ -30,4 +30,4 @@ jobs:
       - run: pnpm format:check
 
       - name: Create release PR
-        uses: changesets/action/version@v2
+        uses: changesets/action@v1
