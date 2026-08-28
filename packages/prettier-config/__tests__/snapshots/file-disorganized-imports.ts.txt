@@ -1,0 +1,10 @@
+// @ts-nocheck
+import { dummy } from '@lyra/dummy'
+import { Table } from '@mui/material'
+import * as lodash from 'lodash'
+import { bar, foo } from './a'
+import { tata } from './abi'
+import { toto } from './App'
+import b from './b'
+import c from './c'
+import { d, p } from './d'

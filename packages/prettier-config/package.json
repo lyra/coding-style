@@ -28,7 +28,7 @@
     "url": "https://github.com/lyra/coding-style/issues"
   },
   "scripts": {
-    "test": "jest"
+    "test": "node --test"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",

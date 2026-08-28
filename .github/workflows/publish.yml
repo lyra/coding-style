@@ -2,31 +2,32 @@ name: publish
 
 on: workflow_dispatch
 
+permissions:
+  contents: write # to check out repo (actions/checkout) and to create releases (changesets/action/publish)
+  id-token: write # for trusted publishing (changesets/action/publish)
+
 jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false # recommended: do not persist git credentials on disk
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9.6.0
+        uses: pnpm/setup@v2
 
       - name: Setup node 24
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: pnpm
+          package-manager-cache: false # recommended: avoid cache poisoning
 
       - run: pnpm install
 
       - name: Publish packages to npm
-        uses: changesets/action@v1
+        uses: changesets/action/publish@v2
         with:
-          publish: pnpm changeset publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          script: pnpm changeset publish

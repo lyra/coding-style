@@ -1,4 +1,4 @@
 .vscode/
 pnpm-lock.yaml
 pnpm-workspace.yaml
-/packages/prettier-config/__fixtures__
+/packages/prettier-config/__tests__/fixtures

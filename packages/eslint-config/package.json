@@ -29,7 +29,7 @@
     "url": "https://github.com/lyra/coding-style/issues"
   },
   "scripts": {
-    "test": "jest"
+    "test": "node --test"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^5.58.0",
